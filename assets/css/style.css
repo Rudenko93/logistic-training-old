@@ -801,9 +801,8 @@ ul, ol {
 /* Articles */
 .articles {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 30px;
+    margin: 0 -15px 30px;
 }
 
 .articles--column {
@@ -819,6 +818,7 @@ ul, ol {
     width: 100%;
     max-width: 500px;
     margin-bottom: 20px;
+    padding: 0 15px;
 }
 
 .articles__title {
@@ -1134,6 +1134,21 @@ ul, ol {
 /* Media Queries */
 
 @media (max-width: 991px) {
+
+
+    /* Intro */
+    .intro__title {
+        font-size: 90px;
+    }
+
+    .intro__title-amp {
+        font-size: 120px;
+
+        right: auto;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+    }
+
     /* Section */
     .section__title {
         text-align: center;
@@ -1171,6 +1186,14 @@ ul, ol {
 
     .clients__list li {
         max-width: 130px;
+    }
+
+
+    /* Footer */
+    .footer {
+        background-size: 330px auto;
+        background-position: left -30px bottom -30px,
+        right -30px bottom -30px;
     }
 }
 
@@ -1234,15 +1257,11 @@ ul, ol {
     }
 
     .intro__title {
-        font-size: 90px;
+        font-size: 70px;
     }
 
     .intro__title-amp {
-        font-size: 120px;
-
-        right: auto;
-        left: 50%;
-        transform: translate3d(-50%, -50%, 0);
+        font-size: 100px;
     }
 
 
@@ -1286,6 +1305,44 @@ ul, ol {
         max-width: 370px;
         margin: 0 auto;
     }
+
+    /* Mission */
+    .mission-title {
+        font-size: 70px;
+    }
+
+    .mission {
+        padding: 40px 20px;
+        margin-top: -16px;
+    }
+
+    .mission__title {
+        font-size: 24px;
+    }
+
+    .mission__subtitle {
+        font-size: 18px;
+    }
+
+
+
+    /* Articles */
+    .articles {
+       flex-wrap: wrap;
+    }
+
+    .articles__item {
+        max-width: none;
+    }
+
+
+
+    /* Footer */
+    .footer {
+        background-size: 250px auto;
+        background-position: left -20px bottom -30px,
+        right -20px bottom -30px;
+    }
 }
 
 
@@ -1301,8 +1358,20 @@ ul, ol {
 
 
     /* Services */
+    .services {
+        padding-top: 50px;
+        padding-bottom: 10px;
+    }
+
     .services__main-title {
+        width: 100%;
+
         font-size: 60px;
+        text-align: center;
+
+        bottom: auto;
+        right: auto;
+        top: 10px;
     }
 
     .services__item {
@@ -1315,8 +1384,24 @@ ul, ol {
         padding: 30px 0;
     }
 
+    .section--last {
+        margin-bottom: 30px;
+    }
+
     .section__title {
         font-size: 35px;
+    }
+
+
+
+    /* Request form */
+    .request-form__header,
+    .request-form__content {
+        padding: 20px;
+    }
+
+    .request-form__title {
+        font-size: 25px;
     }
 
 
@@ -1335,12 +1420,47 @@ ul, ol {
     .clients__list-logo {
         margin: 0 auto;
     }
+
+
+
+    /* Mission */
+    .mission-title {
+        font-size: 40px;
+    }
+
+    .mission {
+        padding: 30px 20px;
+        margin-top: -10px;
+    }
+
+    .mission__title {
+        font-size: 20px;
+    }
+
+    .mission__subtitle {
+        font-size: 16px;
+    }
+
+
+    /* Footer */
+    .footer {
+        background-position: left -120px bottom -80px,
+        right -120px bottom -80px;
+    }
 }
 
 
 
 
+@media (max-width: 320px) {
+    .intro__title {
+        font-size: 40px;
+    }
 
+    .intro__title-amp {
+        font-size: 50px;
+    }
+}
 
 
 
