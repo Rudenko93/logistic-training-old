@@ -134,8 +134,6 @@ ul, ol {
 .intro {
     margin-bottom: 30px;
     position: relative;
-
-    background-color: #000;
 }
 
 .intro--blog {
@@ -155,10 +153,25 @@ ul, ol {
     height: 100%;
     overflow: hidden;
 
+    background: #04222a url("../images/intro-bg.jpg") no-repeat center;
+    background-size: cover;
+
     position: absolute;
     top: 0;
     left: 0;
     z-index: 1;
+}
+
+.intro__slider .slider-item {
+    display: none;
+}
+
+.intro__slider.slick-initialized {
+    background: #04222a;
+}
+
+.intro__slider.slick-initialized .slider-item {
+    display: block;
 }
 
 .intro__slider .slick-list,
@@ -608,6 +621,14 @@ ul, ol {
 
 .reviews {
     position: relative;
+    height: 200px;
+
+    background: url("../images/ajax-loader.gif") no-repeat center;
+}
+
+.reviews.slick-initialized {
+    background: none;
+    height: auto;
 }
 
 .reviews:before,
@@ -684,6 +705,7 @@ ul, ol {
 }
 
 .reviews__item {
+    display: none;
     padding: 0 10px;
 }
 
@@ -1350,7 +1372,7 @@ ul, ol {
     /* Clients */
     .clients {
         flex-direction: column;
-        margin-bottom: 30px;
+        margin-bottom: 60px;
     }
 
     .clients__logos,
@@ -1453,6 +1475,10 @@ ul, ol {
 
     .intro__title-amp {
         font-size: 100px;
+    }
+
+    .intro__slider-arrows {
+        display: none;
     }
 
 
@@ -1632,6 +1658,12 @@ ul, ol {
 
     .clients__list-logo {
         margin: 0 auto;
+    }
+
+    .clients-love {
+        display: block;
+        margin-left: 0;
+        margin-top: 20px;
     }
 
 
