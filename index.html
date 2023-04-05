@@ -7,6 +7,15 @@
     <link rel="stylesheet" href="assets/css/aos.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/favicons/manifest.json">
+    <link rel="mask-icon" href="assets/images/favicons/safari-pinned-tab.svg" color="#004AF2">
+    <meta name="msapplication-TileColor" content="#004AF2">
+    <meta name="theme-color" content="#004AF2">
+
     <title>CenterLogistic</title>
 </head>
 <body>
@@ -28,7 +37,7 @@
                     <a class="nav__link" href="#" data-scroll="#team">Team</a>
                     <a class="nav__link" href="#" data-scroll="#mission">Mission</a>
                     <a class="nav__link" href="#" data-scroll="#news">News</a>
-                    <a class="nav__link" href="#">Contact Us</a>
+                    <a class="nav__link" href="#" data-modal="#becomeClientModal">Contact Us</a>
                 </nav>
 
                 <button class="burger" type="button" id="navToggle">
@@ -365,7 +374,7 @@
             </div>
 
             <div class="text-center">
-                <button class="btn  btn--orange  btn--shadow" type="button">
+                <button class="btn  btn--orange  btn--shadow" type="button" data-modal="#becomeClientModal">
                     <span>Become a client</span>
                 </button>
             </div>
@@ -418,9 +427,9 @@
             </address>
 
             <nav class="footer__nav">
-                <a href="#">Terms &amp; Contidions</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Our blog</a>
+                <a href="text.html">Terms &amp; Contidions</a>
+                <a href="text2.html">Privacy Policy</a>
+                <a href="blog.html">Our blog</a>
             </nav>
         </div>
     </footer>
@@ -428,59 +437,32 @@
 </div>
 
 
-    <!-- Modals -->
-    <div class="modal" id="becomeClientModal">
-        <div class="modal__inner">
-            <div class="modal__content">
-                <div class="modal__header">
-                    <h4 class="modal__title">Need to deliver your cargo?
-        We can help!</h4>
-                    <div class="modal__text">
-                        <p>Fill a little form and we will call you back!</p>
-                    </div>
-                </div>
-
-                <form class="form" action="/" method="post">
-                    <div class="form__group">
-                        <input class="input  input--dark  input--user" type="text" placeholder="Your name">
-                    </div>
-                    <div class="form__group">
-                        <input class="input  input--dark  input--phone" type="tel" placeholder="Your phone">
-                    </div>
-                    <div class="form__group">
-                        <input class="input  input--dark  input--email" type="email" placeholder="Your email">
-                    </div>
-                    <button class="btn  btn--block  btn--orange" type="submit">
-                        <span>Call me back</span>
-                    </button>
-                </form>
-
-                <div class="modal__footer">
-                    <h4 class="modal__footer-title">Our contacts</h4>
-                    <address class="modal__contacts">
-                        <p>New York, Street, ZIP code</p>
-                        <p>Phone: <a href="tel:+9948373123">+9948373123</a></p>
-                        <p>E-mail: <a href="mailto:hello@centerlogistic.com">hello@centerlogistic.com</a></p>
-                    </address>
-                </div>
-
-                <button class="modal__close" type="button" data-modal-close>
-                    <img src="assets/images/close.svg" alt="Close">
-                </button>
-            </div><!-- /.modal__content -->
-        </div><!-- /.modal__inner -->
-    </div><!-- /.modal -->
-
-
-    <div class="modal" id="thanksModal">
-        <div class="modal__inner">
+<!-- Modals -->
+<div class="modal" id="becomeClientModal">
+    <div class="modal__inner">
+        <div class="modal__content">
             <div class="modal__header">
-                <img class="modal__icon" src="assets/images/tick.svg" alt="">
-                <h4 class="modal__title">Thanks for your request</h4>
+                <h4 class="modal__title">Need to deliver your cargo?
+    We can help!</h4>
                 <div class="modal__text">
-                    <p>We call you back as soon as possible!</p>
+                    <p>Fill a little form and we will call you back!</p>
                 </div>
             </div>
+
+            <form class="form" action="/" method="post">
+                <div class="form__group">
+                    <input class="input  input--dark  input--user" type="text" placeholder="Your name">
+                </div>
+                <div class="form__group">
+                    <input class="input  input--dark  input--phone" type="tel" placeholder="Your phone">
+                </div>
+                <div class="form__group">
+                    <input class="input  input--dark  input--email" type="email" placeholder="Your email">
+                </div>
+                <button class="btn  btn--block  btn--orange" type="submit">
+                    <span>Call me back</span>
+                </button>
+            </form>
 
             <div class="modal__footer">
                 <h4 class="modal__footer-title">Our contacts</h4>
@@ -491,15 +473,42 @@
                 </address>
             </div>
 
-            <button class="modal__close" type="button">
+            <button class="modal__close" type="button" data-modal-close>
                 <img src="assets/images/close.svg" alt="Close">
             </button>
-        </div><!-- /.modal__inner -->
-    </div><!-- /.modal -->
+        </div><!-- /.modal__content -->
+    </div><!-- /.modal__inner -->
+</div><!-- /.modal -->
+
+
+<div class="modal" id="thanksModal">
+    <div class="modal__inner">
+        <div class="modal__header">
+            <img class="modal__icon" src="assets/images/tick.svg" alt="">
+            <h4 class="modal__title">Thanks for your request</h4>
+            <div class="modal__text">
+                <p>We call you back as soon as possible!</p>
+            </div>
+        </div>
+
+        <div class="modal__footer">
+            <h4 class="modal__footer-title">Our contacts</h4>
+            <address class="modal__contacts">
+                <p>New York, Street, ZIP code</p>
+                <p>Phone: <a href="tel:+9948373123">+9948373123</a></p>
+                <p>E-mail: <a href="mailto:hello@centerlogistic.com">hello@centerlogistic.com</a></p>
+            </address>
+        </div>
+
+        <button class="modal__close" type="button">
+            <img src="assets/images/close.svg" alt="Close">
+        </button>
+    </div><!-- /.modal__inner -->
+</div><!-- /.modal -->
 
 
 <!-- Javascript -->
-<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+<script src="assets/js/jquery-3.4.1.min.js"></script>
 <script src="assets/js/slick.min.js"></script>
 <script src="assets/js/aos.js"></script>
 <script src="assets/js/app.js"></script>
