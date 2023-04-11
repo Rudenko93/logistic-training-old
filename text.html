@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900|PT+Sans&display=swap&subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/aos.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/aos.css?v=1.0.2">
+    <link rel="stylesheet" href="assets/css/style.css?v=1.0.2">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png">
@@ -26,18 +26,19 @@
     <header class="header" id="header">
         <div class="container">
             <div class="header__inner">
-                <a href="index.html">
-                    <img src="assets/images/logo.svg" alt="CenterLogistic">
+                <a class="header__logo" href="#" data-scroll="#intro">
+                    <img src="assets/images/logo.svg?v=2" alt="CenterLogistic">
+                    <span class="header__logo-text">CenterLogistic</span>
                 </a>
 
-                <nav class="nav">
+                <nav class="nav" id="nav">
                     <a class="nav__link" href="index.html">Home</a>
                     <a class="nav__link" href="blog.html">Blog</a>
                     <a class="nav__link  active" href="text.html">Privacy Policy</a>
                     <a class="nav__link" href="text2.html">Terms &amp; Conditions</a>
                 </nav>
 
-                <button class="burger" type="button">
+                <button class="burger" type="button" id="navToggle">
                     <img class="burger__icon" src="assets/images/burger.svg" alt="">
                 </button>
             </div>
@@ -94,7 +95,10 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <img src="assets/images/logo-black.svg" alt="">
+            <a class="header__logo  header__logo--black" href="#" data-scroll="#intro">
+                <img src="assets/images/logo-black.svg?v=2" alt="CenterLogistic">
+                <span class="header__logo-text">CenterLogistic</span>
+            </a>
             <address class="footer__contacts">
                 <p>New York, Street, ZIP code</p>
                 <p>
